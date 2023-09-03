@@ -529,6 +529,8 @@ main {
 
 .service-icon-box { margin-bottom: 10px; }
 
+.service-icon-box lord-icon { margin: auto; }
+
 .service-icon-box img { margin: auto; }
 
 .service-content-box { text-align: center; }
@@ -1238,7 +1240,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
+/* service */
 
+.service-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 30px;
+}
+
+.service-icon-box {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.service-content-box { text-align: left; }
 
   /**
    * #PORTFOLIO, BLOG 
