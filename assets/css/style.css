@@ -392,7 +392,11 @@ main {
   align-items: center;
   gap: 16px;
 }
-
+.contact-icon{
+  display: inline-block;
+  max-height: 20px;
+  max-width: 20px;
+}
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
