@@ -105,7 +105,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('arrow.png'), auto; 
+  cursor: url('arrow.png'), default;
 }
 
 a { text-decoration: none; }
@@ -275,8 +275,10 @@ article.active {
   z-index: -1;
 }
 
-
-
+a{ cursor: url('./pointer.png'), pointer; }
+path{ cursor: url('./pointer.png'), pointer; }
+button{ cursor: url('./pointer.png'), pointer; }
+lord-icon.pointer{ cursor: url('./pointer.png'), pointer; }
 
 
 /*-----------------------------------*\
