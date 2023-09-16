@@ -119,7 +119,7 @@ button {
   background: none;
   border: none;
   text-align: left;
-  cursor: pointer;
+  cursor: url('pointer.png'), pointer;
 }
 
 input, textarea {
@@ -1165,7 +1165,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--kace-orange); }
+.form-input:focus { border-color: var(--kace-orange); cursor: url('pointer.png'), pointer; }
 
 textarea.form-input {
   min-height: 100px;
@@ -1195,6 +1195,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-3);
   z-index: 1;
   transition: var(--transition-1);
+  cursor: url('pointer.png'), pointer;
 }
 
 .form-btn::before {
@@ -1209,7 +1210,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover { background: var(--bg-gradient-yellow-1); cursor: url('pointer.png'), pointer; }
 
 .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
 
@@ -1221,7 +1222,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
-
 
 
 
