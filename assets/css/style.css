@@ -789,6 +789,10 @@ main {
   margin-bottom: 25px;
 }
 
+.ionicon-exp {
+  color: var(--light-gray-70);
+}
+
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
