@@ -1472,7 +1472,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* clients */
 
   .clients-list {
-    gap: 50px;
+    gap: 0;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
@@ -1774,7 +1774,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 75%;
     margin: 0;
   }
-  
+
   /**
    * SIDEBAR
    */
