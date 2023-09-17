@@ -1,40 +1,48 @@
 'use strict';
 
-
-
-// element toggle function
+/**
+ * The function toggles the "active" class on a given element.
+ * @param elem - The `elem` parameter is a reference to an HTML element.
+ */
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
-// sidebar variables
+/* These lines of code are selecting HTML elements with the attribute `data-sidebar` and
+`data-sidebar-btn` using the `document.querySelector()` method. The selected elements are then
+assigned to the variables `sidebar` and `sidebarBtn`, respectively. */
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// sidebar toggle functionality for mobile
+/* The code `sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });` is
+adding a click event listener to the `sidebarBtn` element. When the `sidebarBtn` element is clicked,
+the function `elementToggleFunc(sidebar)` is executed. This function toggles the "active" class on
+the `sidebar` element, which means it adds the class if it's not present and removes it if it's
+already present. This allows the sidebar to be shown or hidden when the button is clicked. */
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-
-
-// testimonials variables
+/* These lines of code are selecting HTML elements with specific data attributes using the
+`document.querySelector()` and `document.querySelectorAll()` methods. */
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
+/* These lines of code are selecting HTML elements with specific data attributes using the
+`document.querySelector()` method. */
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalTime = document.querySelector("[data-modal-time]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
+/**
+ * The function toggles the "active" class on the modal container and overlay elements.
+ */
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-// add click event to all modal items
+/* The code block is adding a click event listener to each element in the `testimonialsItem` array.
+When any of these elements are clicked, the function inside the event listener is executed. */
 for (let i = 0; i < testimonialsItem.length; i++) {
 
   testimonialsItem[i].addEventListener("click", function () {
@@ -50,13 +58,15 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
-// add click event to modal close button
+/* The code `modalCloseBtn.addEventListener("click", testimonialsModalFunc);` adds a click event
+listener to the `modalCloseBtn` element. When the `modalCloseBtn` element is clicked, the function
+`testimonialsModalFunc()` is executed. This function toggles the "active" class on the modal
+container and overlay elements, effectively closing the modal. */
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
-
-
-// custom select variables
+/* This code is selecting HTML elements with specific data attributes using the
+`document.querySelector()` and `document.querySelectorAll()` methods. */
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
@@ -64,7 +74,8 @@ const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
-// add event in all select items
+/* The code block is adding a click event listener to each element in the `selectItems` array. When any
+of these elements are clicked, the function inside the event listener is executed. */
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
@@ -76,7 +87,10 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
-// filter variables
+/* The code block defines a function called `filterFunc` that takes a parameter `selectedValue`. Inside
+the function, it loops through all the elements selected by the
+`document.querySelectorAll("[data-filter-item]")` selector, which have the attribute
+`data-filter-item`. */
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
@@ -95,7 +109,8 @@ const filterFunc = function (selectedValue) {
 
 }
 
-// add event in all filter button items for large screen
+/* The code block is adding a click event listener to each element in the `filterBtn` array. When any
+of these elements are clicked, the function inside the event listener is executed. */
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -114,18 +129,19 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
-// contact form variables
+/* This code is selecting HTML elements with specific data attributes using the
+`document.querySelector()` and `document.querySelectorAll()` methods. */
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
+/* The code block is adding an event listener to each element in the `formInputs` array. The event
+listener listens for the "input" event, which is triggered when the user interacts with an input
+field (e.g., typing, pasting, or deleting text). */
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
-    // check form validation
+    /* The code block is checking the validity of the form using the `checkValidity()` method. */
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -135,13 +151,13 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-
-
-// page navigation variables
+/* These lines of code are selecting HTML elements with the attribute `data-nav-link` and `data-page`
+using the `document.querySelectorAll()` method. */
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+/* The code block is adding a click event listener to each element in the `navigationLinks` array. When
+any of these elements are clicked, the function inside the event listener is executed. */
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 

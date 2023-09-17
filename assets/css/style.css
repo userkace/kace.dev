@@ -1,4 +1,12 @@
 :root {
+
+  /**
+   * cursors
+   */
+
+  --cursor: url('arrow.png'), default;
+  --cursor-pointer: url('pointer.png'), pointer;
+  
   /**
    * colors
    */
@@ -105,7 +113,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('arrow.png'), default;
+  cursor: var(--cursor);
 }
 
 a { text-decoration: none; }
@@ -119,7 +127,7 @@ button {
   background: none;
   border: none;
   text-align: left;
-  cursor: url('pointer.png'), pointer;
+  cursor: var(--cursor-pointer);
 }
 
 input, textarea {
@@ -262,7 +270,7 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   z-index: 1;
 }
 
@@ -275,10 +283,10 @@ article.active {
   z-index: -1;
 }
 
-a{ cursor: url('./pointer.png'), pointer; }
-path{ cursor: url('./pointer.png'), pointer; }
-button{ cursor: url('./pointer.png'), pointer; }
-lord-icon.pointer{ cursor: url('./pointer.png'), pointer; }
+a{ cursor: var(--cursor-pointer); }
+path{ cursor: var(--cursor-pointer); }
+button{ cursor: var(--cursor-pointer); }
+lord-icon.pointer{ cursor: var(--cursor-pointer); }
 
 
 /*-----------------------------------*\
@@ -1165,7 +1173,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--kace-orange); cursor: url('pointer.png'), pointer; }
+.form-input:focus { border-color: var(--kace-orange); cursor: var(--cursor-pointer); }
 
 textarea.form-input {
   min-height: 100px;
@@ -1195,7 +1203,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-3);
   z-index: 1;
   transition: var(--transition-1);
-  cursor: url('pointer.png'), pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .form-btn::before {
@@ -1210,7 +1218,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); cursor: url('pointer.png'), pointer; }
+.form-btn:hover { background: var(--bg-gradient-yellow-1); cursor: var(--cursor-pointer); }
 
 .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
 
@@ -1886,8 +1894,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .social-list { justify-content: center; }
-
-
 
   /**
 	 * RESUME
