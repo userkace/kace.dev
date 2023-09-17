@@ -969,7 +969,10 @@ main {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
+  filter: grayscale(1);
 }
+
+.project-img:hover { filter: grayscale(0); }
 
 .project-img::before {
   content: "";
@@ -1622,6 +1625,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * PORTFOLIO
    */
+
+
+  
 
   .article-title { padding-bottom: 20px; }
 
