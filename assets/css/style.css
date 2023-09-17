@@ -3,9 +3,10 @@
   /**
    * cursors
    */
-
-  --cursor: url('arrow.png'), default;
-  --cursor-pointer: url('pointer.png'), pointer;
+  --cursor: url('pointer.png'), default;
+  --cursor-pointer: url('link.png'), pointer;
+  --cursor-text: url('text.png'), not-allowed;
+  --cursor-blocked: url('unavailiable.png'), not-allowed;
   
   /**
    * colors
@@ -135,6 +136,7 @@ input, textarea {
   width: 100%;
   background: none;
   font: inherit;
+  cursor: var(--cursor-text);
 }
 
 ::selection {
@@ -249,19 +251,22 @@ article.active {
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
+  cursor: var(--cursor-pointer);
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
   background: var(--onyx);
   border-radius: 5px;
+  cursor: var(--cursor-pointer);
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: var(--kace-orange);
   border-radius: 5px;
+  cursor: var(--cursor-pointer);
 }
 
-.has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+.has-scrollbar::-webkit-scrollbar-button { width: 20px; cursor: var(--cursor-pointer); }
 
 .content-card {
   position: relative;
@@ -270,9 +275,10 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: var(--cursor-pointer);
   z-index: 1;
 }
+
+.content-card:hover{ cursor: var(--cursor-pointer); }
 
 .content-card::before {
   content: "";
@@ -735,7 +741,7 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients { margin-bottom: 0; }
 
 .clients-list {
   display: flex;
@@ -759,13 +765,13 @@ main {
 
 .clients-item img {
   --scale: 0.9;
-  width: 100%;
+  width: 100%;;
   filter: grayscale(1);
   transform:  scale(var(--scale));
   transition: var(--transition-1);
 }
 
-.clients-item img:hover {--scale: 1; filter: grayscale(0); }
+.clients-item img:hover {--scale: 1; filter: grayscale(0); cursor: var(--cursor-pointer);}
 
 /*-----------------------------------*\
   #RESUME
@@ -846,7 +852,7 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { padding: 20px; margin-bottom: 20px; }
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
@@ -983,7 +989,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); cursor: var(--cursor-pointer); }
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1004,9 +1010,10 @@ main {
 .project-item > a:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
+  cursor: var(--cursor-pointer);
 }
 
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; cursor: var(--cursor-pointer); }
 
 .project-img img {
   width: 100%;
@@ -1164,7 +1171,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--kace-orange); cursor: var(--cursor-pointer); }
+.form-input:focus { border-color: var(--kace-orange); cursor: var(--cursor-text); }
 
 textarea.form-input {
   min-height: 100px;
@@ -1194,7 +1201,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-3);
   z-index: 1;
   transition: var(--transition-1);
-  cursor: var(--cursor-pointer);
+  cursor: var(--cursor-block);
 }
 
 .form-btn::before {
@@ -1209,13 +1216,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); cursor: var(--cursor-pointer); }
+.form-btn:hover { background: var(--bg-gradient-yellow-1); cursor: var(--cursor-block); }
 
 .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
 
 .form-btn:disabled {
   opacity: 0.7;
-  cursor: not-allowed;
+  cursor: var(--cursor-blocked);
 }
 
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
@@ -1235,6 +1242,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * client
    */
+
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
