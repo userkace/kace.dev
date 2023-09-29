@@ -244,7 +244,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background:  #fd955b; /*var(--text-gradient-yellow)*/
+  background:  var(--kace-orange); /*var(--text-gradient-yellow)*/
   border-radius: 3px;
 }
 
