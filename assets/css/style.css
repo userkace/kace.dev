@@ -1486,9 +1486,17 @@ textarea.form-input::-webkit-resizer { display: none; }
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  /* calc(33.33% - 35px); */
 
-  .client { max-height: 100px; object-fit: contain; object-position: center; }
+  .clients-item { min-width: 100px; }
+
+  .client {
+    max-height: 100px;
+    min-width: 100px;
+    object-fit: contain;
+    object-position: center;
+    -o-object-fit: contain;
+    -o-object-position: center;}
 
   /**
    * #RESUME
