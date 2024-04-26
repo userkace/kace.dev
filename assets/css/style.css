@@ -1488,6 +1488,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 35px); }
 
+  .client { max-height: 100px; object-fit: contain; object-position: center; }
+
   /**
    * #RESUME
    */
