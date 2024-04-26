@@ -86,7 +86,7 @@
   /**
    * shadow
    */
-  
+
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
@@ -769,6 +769,7 @@ main {
   filter: grayscale(1);
   transform:  scale(var(--scale));
   transition: var(--transition-1);
+  cursor: var(--cursor-pointer);
 }
 
 .clients-item img:hover {--scale: 1; filter: grayscale(0); cursor: var(--cursor-pointer);}
@@ -1496,7 +1497,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     object-fit: contain;
     object-position: center;
     -o-object-fit: contain;
-    -o-object-position: center;}
+    -o-object-position: center;
+    cursor: var(--cursor-pointer);
+  }
 
   /**
    * #RESUME
