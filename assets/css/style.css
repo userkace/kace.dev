@@ -738,7 +738,7 @@ main {
 
 
 /**
- * #clients 
+ * #clients
  */
 
 .clients { margin-bottom: 0; }
@@ -780,7 +780,7 @@ main {
 .article-title { margin-bottom: 30px; }
 
 /**
- * education and experience 
+ * education and experience
  */
 
 .timeline { margin-bottom: 30px; }
@@ -1720,7 +1720,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  /* .clients-item { min-width: calc(25% - 38px); } */
 
 
 
