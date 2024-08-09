@@ -647,7 +647,7 @@
               <div class="title-wrapper">
                 <ion-icon name="logo-github" class="ionicon-exp"></ion-icon>
                 <h5 class="h5">Github</h5>
-                <data value="70">70%</data>
+                <data value="70">80%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 70%;"></div>
@@ -669,7 +669,7 @@
               <div class="title-wrapper">
                 <ion-icon name="logo-figma" class="ionicon-exp"></ion-icon>
                 <h5 class="h5">Figma</h5>
-                <data value="50">50%</data>
+                <data value="50">70%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 50%;"></div>
@@ -713,6 +713,17 @@
               </div>
             </li>
 
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <ion-icon name="code" class="ionicon-exp"></ion-icon>
+                <h5 class="h5">Dart</h5>
+                <data value="90">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
             </ul>
 
             <ul class="skills-list content-card" alt="web development skills">
@@ -732,7 +743,7 @@
               <div class="title-wrapper">
                 <ion-icon name="logo-css3" class="ionicon-exp"></ion-icon>
                 <h5 class="h5">CSS</h5>
-                <data value="60">60%</data>
+                <data value="60">70%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 60%;"></div>
@@ -743,7 +754,7 @@
               <div class="title-wrapper">
                 <ion-icon name="logo-javascript" class="ionicon-exp"></ion-icon>
                 <h5 class="h5">Javascript</h5>
-                <data value="30">30%</data>
+                <data value="30">50%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 30%;"></div>
@@ -790,11 +801,15 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
+              <button data-filter-btn>Web</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>App Development</button>
+              <button data-filter-btn>Android</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Progressive Web</button>
             </li>
 
           </ul>
@@ -803,7 +818,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -818,11 +833,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web Development</button>
+                <button data-select-item>Web</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>App Development</button>
+                <button data-select-item>Android</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Progressive Web</button>
               </li>
 
             </ul>
@@ -831,7 +850,43 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="android">
+              <a href="https://github.com/userkace/qr-maker">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portfolio/film-website.webp" alt="A flutter made application showcasing my profile" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Profile</h3>
+
+                <p class="project-category">Android</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="progressive web">
+              <a href="https://github.com/userkace/qr-maker">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portfolio/film-website.webp" alt="qr.kace.dev Free online QR code maker" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">QR Maker</h3>
+
+                <p class="project-category">Progressive Web</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="progressive web">
               <a href="https://github.com/userkace/film.kace.dev">
 
                 <figure class="project-img">
@@ -844,12 +899,12 @@
 
                 <h3 class="project-title">film.kace.dev</h3>
 
-                <p class="project-category">Web Development</p>
+                <p class="project-category">Progressive Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="app development">
+            <li class="project-item  active" data-filter-item data-category="android">
               <a href="https://github.com/userkace/packaged">
 
                 <figure class="project-img">
@@ -862,12 +917,12 @@
 
                 <h3 class="project-title">Packaged</h3>
 
-                <p class="project-category">App Development</p>
+                <p class="project-category">Android</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="app development">
+            <li class="project-item  active" data-filter-item data-category="progressive web">
               <a href="https://github.com/userkace/m.me">
 
                 <figure class="project-img">
@@ -880,12 +935,12 @@
 
                 <h3 class="project-title">m.me Link Maker</h3>
 
-                <p class="project-category">App Development</p>
+                <p class="project-category">Progressive Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web">
               <a href="https://github.com/userkace/loop-hau">
 
                 <figure class="project-img">
@@ -898,12 +953,12 @@
 
                 <h3 class="project-title">LOOP Website</h3>
 
-                <p class="project-category">Web Development</p>
+                <p class="project-category">Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web">
               <a href="https://github.com/gdschau/gdschau.github.io">
 
                 <figure class="project-img">
@@ -916,7 +971,7 @@
 
                 <h3 class="project-title">GDSC Website</h3>
 
-                <p class="project-category">Web Development</p>
+                <p class="project-category">Web</p>
 
               </a>
             </li>
