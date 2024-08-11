@@ -293,6 +293,7 @@ a{ cursor: var(--cursor-pointer); }
 path{ cursor: var(--cursor-pointer); }
 button{ cursor: var(--cursor-pointer); }
 lord-icon.pointer{ cursor: var(--cursor-pointer); }
+ion-icon.pointer{ cursor: var(--cursor-pointer); }
 
 
 /*-----------------------------------*\
@@ -598,6 +599,10 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-1);
 }
+
+.testimonials-item .content-card:hover{
+  background-color: #fad09d;
+};
 
 .testimonials-item-title { margin-bottom: 7px; }
 
