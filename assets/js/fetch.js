@@ -91,7 +91,7 @@ function filterProjects() {
   const selectValue = document.querySelector("[data-select-value]");
   const selectList = document.querySelector("[data-select]");
   filterBtns[0].classList.add("active");
-  let lastActiveBtn = filterBtns[0];
+  let lastActiveBtn = filterBtns.length > 0 ? filterBtns[0] : null;
 
 
 
