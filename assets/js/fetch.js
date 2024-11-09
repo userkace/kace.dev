@@ -90,9 +90,8 @@ function filterProjects() {
   const selectItems = document.querySelectorAll("[data-select-item]");
   const selectValue = document.querySelector("[data-select-value]");
   const selectList = document.querySelector("[data-select]");
-  filterBtns[0].classList.add("active");
   let lastActiveBtn = filterBtns.length > 0 ? filterBtns[0] : null;
-
+  filterBtns[0].classList.add("active");
 
 
   [...filterBtns, ...selectItems].forEach((item) => {
