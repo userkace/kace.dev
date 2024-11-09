@@ -74,60 +74,70 @@ const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
+
+
+
+
+
 /* The code block is adding a click event listener to each element in the `selectItems` array. When any
 of these elements are clicked, the function inside the event listener is executed. */
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+// for (let i = 0; i < selectItems.length; i++) {
+//   selectItems[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
+//     let selectedValue = this.innerText.toLowerCase();
+//     selectValue.innerText = this.innerText;
+//     elementToggleFunc(select);
+//     filterFunc(selectedValue);
+//   });
+// }
 
-  });
-}
 
 /* The code block defines a function called `filterFunc` that takes a parameter `selectedValue`. Inside
 the function, it loops through all the elements selected by the
 `document.querySelectorAll("[data-filter-item]")` selector, which have the attribute
 `data-filter-item`. */
-const filterItems = document.querySelectorAll("[data-filter-item]");
+// const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+// const filterFunc = function (selectedValue) {
 
-  for (let i = 0; i < filterItems.length; i++) {
+//   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
+//     if (selectedValue === "all") {
+//       filterItems[i].classList.add("active");
+//     } else if (selectedValue === filterItems[i].dataset.category) {
+//       filterItems[i].classList.add("active");
+//     } else {
+//       filterItems[i].classList.remove("active");
+//     }
 
-  }
+//   }
 
-}
+// }
 
 /* The code block is adding a click event listener to each element in the `filterBtn` array. When any
 of these elements are clicked, the function inside the event listener is executed. */
-let lastClickedBtn = filterBtn[0];
+// let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+// for (let i = 0; i < filterBtn.length; i++) {
 
-  filterBtn[i].addEventListener("click", function () {
+//   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+//     let selectedValue = this.innerText.toLowerCase();
+//     selectValue.innerText = this.innerText;
+//     filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+//     lastClickedBtn.classList.remove("active");
+//     this.classList.add("active");
+//     lastClickedBtn = this;
 
-  });
+//   });
 
-}
+// }
+
+
+
+
+
 
 /* This code is selecting HTML elements with specific data attributes using the
 `document.querySelector()` and `document.querySelectorAll()` methods. */
