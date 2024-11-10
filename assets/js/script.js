@@ -161,37 +161,77 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-/* These lines of code are selecting HTML elements with the attribute `data-nav-link` and `data-page`
-using the `document.querySelectorAll()` method. */
+// /* These lines of code are selecting HTML elements with the attribute `data-nav-link` and `data-page`
+// using the `document.querySelectorAll()` method. */
+// const navigationLinks = document.querySelectorAll("[data-nav-link]");
+// const pages = document.querySelectorAll("[data-page]");
+
+// /* The code block is adding a click event listener to each element in the `navigationLinks` array. When
+// any of these elements are clicked, the function inside the event listener is executed. */
+// function activatePageByHash(hash) {
+//   for (let i = 0; i < pages.length; i++) {
+//     if (hash === pages[i].dataset.page) {
+//       pages[i].classList.add("active");
+//       navigationLinks[i].classList.add("active");
+//       window.scrollTo(0, 0);
+//     } else {
+//       pages[i].classList.remove("active");
+//       navigationLinks[i].classList.remove("active");
+//     }
+//   }
+// }
+
+// window.addEventListener("load", function () {
+//   const initialHash = window.location.hash.substring(1);
+//   if (initialHash) {
+//     activatePageByHash(initialHash);
+//   }
+// });
+
+// for (let i = 0; i < navigationLinks.length; i++) {
+//   navigationLinks[i].addEventListener("click", function () {
+//     const pageName = this.innerHTML.toLowerCase();
+//     window.history.pushState(null, "", `#${pageName}`);
+//     activatePageByHash(pageName);
+//   });
+// }
+
+// Cache frequently accessed elements
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-/* The code block is adding a click event listener to each element in the `navigationLinks` array. When
-any of these elements are clicked, the function inside the event listener is executed. */
+// Use event delegation (not necessary in this case, since we're already selecting the navigation links directly)
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    const pageName = this.innerHTML.toLowerCase();
+    window.history.pushState(null, "", `#${pageName}`);
+    activatePageByHash(pageName);
+  });
+});
+
+// Optimize the activatePageByHash function
 function activatePageByHash(hash) {
-  for (let i = 0; i < pages.length; i++) {
-    if (hash === pages[i].dataset.page) {
-      pages[i].classList.add("active");
-      navigationLinks[i].classList.add("active");
-      window.scrollTo(0, 0);
+  pages.forEach((page) => {
+    if (page.dataset.page === hash) {
+      page.classList.add("active");
     } else {
-      pages[i].classList.remove("active");
-      navigationLinks[i].classList.remove("active");
+      page.classList.remove("active");
     }
-  }
+  });
+  navigationLinks.forEach((link) => {
+    if (link.innerHTML.toLowerCase() === hash) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+  window.scroll({ top: 0, behavior: "smooth" });
 }
 
+// Initialize on page load
 window.addEventListener("load", function () {
   const initialHash = window.location.hash.substring(1);
   if (initialHash) {
     activatePageByHash(initialHash);
   }
 });
-
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    const pageName = this.innerHTML.toLowerCase();
-    window.history.pushState(null, "", `#${pageName}`);
-    activatePageByHash(pageName);
-  });
-}
