@@ -995,6 +995,18 @@ main {
   margin-bottom: 15px;
 }
 
+.skill {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.01rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .skill {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .skill .title-wrapper {
   display: flex;
   align-items: center;
