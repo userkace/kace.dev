@@ -1,5 +1,69 @@
 'use strict';
 
+fetch('data/clients.json')
+  .then(response => response.json())
+  .then(data => {
+    const clientsList = document.querySelector('.clients-list');
+    data.clients.forEach(client => {
+      const clientItem = document.createElement('li');
+      clientItem.classList.add('clients-item');
+      const clientLink = document.createElement('a');
+      clientLink.href = client.href;
+      const clientImg = document.createElement('img');
+      clientImg.classList.add('client');
+      clientImg.src = client.image;
+      clientImg.alt = client.alt;
+      clientImg.loading = 'lazy';
+      clientLink.appendChild(clientImg);
+      clientItem.appendChild(clientLink);
+      clientsList.appendChild(clientItem);
+    });
+  });
+
+fetch('data/education.json')
+  .then(response => response.json())
+  .then(data => {
+    const educationList = document.querySelector('#education');
+    data.timeline.forEach(item => {
+      const timelineItem = document.createElement('li');
+      timelineItem.classList.add('timeline-item');
+      const title = document.createElement('h4');
+      title.classList.add('h4', 'timeline-item-title');
+      title.textContent = item.title;
+      const span = document.createElement('span');
+      span.textContent = item.date;
+      const text = document.createElement('p');
+      text.classList.add('timeline-text');
+      text.textContent = item.text;
+      timelineItem.appendChild(title);
+      timelineItem.appendChild(span);
+      timelineItem.appendChild(text);
+      educationList.appendChild(timelineItem);
+    });
+  });
+
+fetch('data/experience.json')
+  .then(response => response.json())
+  .then(data => {
+    const experienceList = document.querySelector('#experience');
+    data.timeline.forEach(item => {
+      const timelineItem = document.createElement('li');
+      timelineItem.classList.add('timeline-item');
+      const title = document.createElement('h4');
+      title.classList.add('h4', 'timeline-item-title');
+      title.textContent = item.title;
+      const span = document.createElement('span');
+      span.textContent = item.date;
+      const text = document.createElement('p');
+      text.classList.add('timeline-text');
+      text.textContent = item.text;
+      timelineItem.appendChild(title);
+      timelineItem.appendChild(span);
+      timelineItem.appendChild(text);
+      experienceList.appendChild(timelineItem);
+    });
+  });
+
 fetch('data/categories.json')
   .then(response => response.json())
   .then(data => {
@@ -82,8 +146,6 @@ fetch('data/projects.json')
     filterProjects();
   });
 
-
-
 function filterProjects() {
   const filterItems = document.querySelectorAll("[data-filter-item]");
   const filterBtns = document.querySelectorAll("[data-filter-btn]");
@@ -115,4 +177,3 @@ function filterProjects() {
     });
   });
 }
-

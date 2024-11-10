@@ -1,0 +1,19 @@
+{
+     "clients": [
+       {
+         "href": "https://www.facebook.com/HAUCSCSOC",
+         "image": "./assets/images/clients/soc-logo.webp",
+         "alt": "soc client logo"
+       },
+       {
+         "href": "https://www.facebook.com/loop.soc.hau",
+         "image": "./assets/images/clients/loop-logo.webp",
+         "alt": "loop client logo"
+       },
+       {
+         "href": "https://www.facebook.com/gdsc.hau",
+         "image": "./assets/images/clients/gdsc-logo.webp",
+         "alt": "gdsc client logo"
+       }
+     ]
+   }
