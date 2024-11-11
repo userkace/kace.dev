@@ -4,56 +4,56 @@
          "title": "Neurorite",
          "description": "A flutter made application for note-taking.",
          "image": "assets/images/portfolio/neurorite-app.webp",
-         "category": "Android",
+         "category": ["Android", "Web", "PWA"],
          "link": "https://github.com/userkace/neurorite"
        },
        {
          "title": "Profile",
          "description": "A flutter made application showcasing my profile.",
          "image": "assets/images/portfolio/film-website.webp",
-         "category": "Android",
+         "category": ["Android"],
          "link": "https://github.com/userkace/profile"
        },
        {
          "title": "qr.kace.dev",
          "description": "Free online QR code maker.",
          "image": "assets/images/portfolio/qr-website.webp",
-         "category": "Progressive Web",
+         "category": ["Web","PWA"],
          "link": "https://qr.kace.dev"
        },
        {
          "title": "film.kace.dev",
          "description": "Free online streaming website.",
          "image": "assets/images/portfolio/film-website.webp",
-         "category": "Progressive Web",
+         "category": ["Web","PWA"],
          "link": "https://github.com/userkace/film.kace.dev"
        },
        {
          "title": "Packaged",
          "description": "Android package name viewer.",
          "image": "assets/images/portfolio/packaged-app.webp",
-         "category": "Android",
+         "category": ["Android"],
          "link": "https://github.com/userkace/packaged"
        },
        {
          "title": "m.me Link Maker",
          "description": "A meta facebook messenger m.me link generator.",
          "image": "assets/images/portfolio/mme-app.webp",
-         "category": "Progressive Web",
+         "category": ["PWA"],
          "link": "https://github.com/userkace/m.me"
        },
        {
          "title": "LOOP Website",
          "description": "LOOP SOC HAU Website.",
          "image": "assets/images/portfolio/loop-website.webp",
-         "category": "Web",
+         "category": ["Web"],
          "link": "https://github.com/userkace/loop-hau"
        },
        {
          "title": "GDSC Website",
          "description": "GDSC-HAU Website.",
          "image": "assets/images/portfolio/gdsc-website.webp",
-         "category": "Web",
+         "category": ["Web"],
          "link": "https://github.com/gdschau/gdschau.github.io"
        }
      ]
