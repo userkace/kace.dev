@@ -64,6 +64,59 @@ fetch('data/experience.json')
     });
   });
 
+  fetch('data/skills.json')
+  .then(response => response.json())
+  .then(data => {
+    const skillsSection = document.querySelector('.skill');
+
+    Object.keys(data).forEach(category => {
+      const skillsList = document.createElement('ul');
+      skillsList.classList.add('skills-list', 'content-card');
+      skillsList.alt = category;
+
+      data[category].forEach(skill => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('skills-item');
+
+        const titleWrapper = document.createElement('div');
+        titleWrapper.classList.add('title-wrapper');
+
+        const icon = document.createElement('ion-icon');
+        if (skill.src) {
+          icon.setAttribute('src', skill.src);
+        } else {
+          icon.name = skill.icon;
+        }
+        icon.classList.add('ionicon-exp');
+        titleWrapper.appendChild(icon);
+
+        const name = document.createElement('h5');
+        name.classList.add('h5');
+        name.textContent = skill.name;
+        titleWrapper.appendChild(name);
+
+        const dataValue = document.createElement('data');
+        dataValue.value = skill.value;
+        dataValue.textContent = `${skill.value}%`;
+        titleWrapper.appendChild(dataValue);
+
+        const skillProgressBg = document.createElement('div');
+        skillProgressBg.classList.add('skill-progress-bg');
+
+        const skillProgressFill = document.createElement('div');
+        skillProgressFill.classList.add('skill-progress-fill');
+        skillProgressFill.style.width = `${skill.value}%`;
+        skillProgressBg.appendChild(skillProgressFill);
+
+        listItem.appendChild(titleWrapper);
+        listItem.appendChild(skillProgressBg);
+        skillsList.appendChild(listItem);
+      });
+
+      skillsSection.appendChild(skillsList);
+    });
+  });
+
 fetch('data/categories.json')
   .then(response => response.json())
   .then(data => {

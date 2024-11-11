@@ -1,0 +1,74 @@
+{
+     "tools": [{
+               "name": "Github",
+               "icon": "logo-github",
+               "value": 80
+          },
+          {
+               "name": "Figma",
+               "icon": "logo-figma",
+               "value": 70
+          },
+          {
+               "name": "Stack Overflow",
+               "icon": "logo-stackoverflow",
+               "value": 30
+          }
+     ],
+
+     "real_life": [{
+               "name": "Computer Repair",
+               "icon": "hammer",
+               "value": 90
+          },
+          {
+               "name": "Photography",
+               "icon": "camera",
+               "value": 100
+          }
+     ],
+
+     "programming": [{
+               "name": "Python",
+               "icon": "logo-python",
+               "value": 90
+          },
+          {
+               "name": "Java",
+               "icon": "cafe",
+               "value": 80
+          },
+          {
+               "name": "C++",
+               "src": "assets/images/ion/cpp.svg",
+               "value": 80
+          },
+          {
+               "name": "Dart",
+               "src": "assets/images/ion/dart.svg",
+               "value": 70
+          }
+     ],
+
+     "web_development": [{
+               "name": "HTML",
+               "icon": "logo-html5",
+               "value": 90
+          },
+          {
+               "name": "Tailwind",
+               "src": "assets/images/ion/tailwind.svg",
+               "value": 85
+          },
+          {
+               "name": "CSS",
+               "icon": "logo-css3",
+               "value": 70
+          },
+          {
+               "name": "JavaScript",
+               "icon": "logo-javascript",
+               "value": 60
+          }
+     ]
+}
