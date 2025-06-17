@@ -1,29 +1,34 @@
 {
-     "timeline": [
-       {
-         "title": "Chief Financial Officer",
-         "date": "June 2024 – Present",
-         "text": "I was elected as C.F.O. of Google Developer Student Clubs at Holy Angel University."
-       },
-       {
-         "title": "Freelance Online Tutor",
-         "date": "June 2022 – Present",
-         "text": "I teach different programming languages to Junior Highschool Students online."
-       },
-       {
-         "title": "Chief Technology Officer",
-         "date": "July 2023 – June 2024",
-         "text": "I was elected as C.T.O. of Google Developer Student Clubs at Holy Angel University."
-       },
-       {
-         "title": "Councilor for Financial Management",
-         "date": "July 2023 – June 2024",
-         "text": "I was elected as School of Computing College Student Councilor for Financial Management at Holy Angel University."
-       },
-       {
-         "title": "Film Cinematographer",
-         "date": "December 2017 – February 2018",
-         "text": "I was a Film Cinematographer, Videographer, and Editor for Silang Productions on Cinemasigla 2018."
-       }
-     ]
-   }
+  "timeline": [
+    {
+      "title": "Cloud Developer",
+      "date": "April 2025 – Present",
+      "text": "As Cloud Developer, I engineer and deploy scalable cloud solutions to drive operational efficiency and innovation for the organization. My focus is delivering robust, secure, and cost-effective cloud infrastructure that aligns with organization objectives."
+    },
+    {
+      "title": "Freelance Online Tutor",
+      "date": "June 2022 – Present",
+      "text": "As a Freelance Academic Tutor, I empower junior high school students to master complex subjects—from programming languages like Python and Java to research methodologies and statistical analysis—through personalized online instruction. By designing adaptable lesson plans that break down intimidating concepts into digestible, engaging modules, I foster confidence and curiosity in learners while aligning with their unique academic goals. My approach blends foundational skill-building with real-world applications, whether guiding students through coding projects that bring algorithms to life or mentoring them in crafting research papers that sharpen critical thinking. Through patient, student-centered coaching, I cultivate not only subject mastery but also lifelong problem-solving skills that transcend the classroom."
+    },
+    {
+      "title": "Chief Financial Officer",
+      "date": "June 2024 – April 2025",
+      "text": "As Chief Financial Officer, I orchestrated the organization’s financial strategy to ensure fiscal health and sustainable growth, aligning resources with both operational demands and long-term strategic objectives. By spearheading end-to-end financial planning and budgeting for projects and events, I strategically allocated funds to amplify community impact while optimizing return on investment—driving initiatives that balanced financial discipline with ambitious organizational goals."
+    },
+    {
+      "title": "Chief Technology Officer",
+      "date": "July 2023 – June 2024",
+      "text": "As Chief Technology Officer, I drove the organization’s technological vision by ideating and executing impactful events and projects tailored to empower members and elevate their academic journeys. By spearheading initiatives from concept to completion, I ensured seamless delivery of innovative solutions—transforming ideas into actionable programs that equipped our community with cutting-edge tools and knowledge. My focus centered on bridging education and technology, crafting strategic roadmaps to develop accessible, practical resources that amplified learning outcomes and fostered a culture of curiosity and technical mastery."
+    },
+    {
+      "title": "Councilor for Financial Management",
+      "date": "July 2023 – June 2024",
+      "text": "As an Financial Management Councilor, I championed fiscal responsibility and transparency by strategically overseeing the allocation of student body funds, ensuring resources directly supported academic initiatives, tech workshops, and community-building events. By collaborating with faculty advisors and student leaders, I optimized budgets to maximize impact—securing funding for coding bootcamps, hackathons, and peer mentorship programs while maintaining rigorous financial oversight. My role centered on bridging student needs with institutional priorities, advocating for cost-effective solutions that empowered peers to innovate without compromising accountability. Through detailed financial reporting and open forums, I fostered trust and engagement, transforming complex budgetary decisions into accessible, student-driven outcomes."
+    },
+    {
+      "title": "Film Cinematographer",
+      "date": "December 2017 – February 2018",
+      "text": "I was a Film Cinematographer, Videographer, and Editor for Silang Productions on Cinemasigla 2018."
+    }
+  ]
+}
