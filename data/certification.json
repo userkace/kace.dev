@@ -1,0 +1,40 @@
+{
+    "timeline": [
+      {
+        "title": "AWS Academy Graduate - AWS Academy Cloud Foundations",
+        "date": "April 2025",
+        "text": "Amazon Web Services (AWS)"
+      },
+      {
+        "title": "Cyber Threat Management",
+        "date": "November 2024",
+        "text": "Cisco"
+      },
+      {
+        "title": "Data Engineer Associate",
+        "date": "November 2024",
+        "text": "DataCamp"
+      },
+      {
+        "title": "English for IT 1",
+        "date": "October 2024",
+        "text": "Cisco"
+      },
+      {
+        "title": "Cybersecurity Essential",
+        "date": "September 2024",
+        "text": "Cisco"
+      },
+      {
+        "title": "CCNAv7: Introduction to Networks",
+        "date": "May 2024",
+        "text": "Cisco"
+      },
+      {
+        "title": "CompTIA IT Fundamentals (ITF+) Certification",
+        "date": "May 2023",
+        "text": "CompTIA"
+      }
+
+    ]
+  }

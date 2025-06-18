@@ -64,6 +64,28 @@ fetch('data/experience.json')
     });
   });
 
+fetch('data/certification.json')
+  .then(response => response.json())
+  .then(data => {
+    const certificationList = document.querySelector('#certification');
+    data.timeline.forEach(item => {
+      const timelineItem = document.createElement('li');
+      timelineItem.classList.add('timeline-item');
+      const title = document.createElement('h4');
+      title.classList.add('h4', 'timeline-item-title');
+      title.textContent = item.title;
+      const span = document.createElement('span');
+      span.textContent = item.date;
+      const text = document.createElement('p');
+      text.classList.add('timeline-text');
+      text.textContent = item.text;
+      timelineItem.appendChild(title);
+      timelineItem.appendChild(span);
+      timelineItem.appendChild(text);
+      certificationList.appendChild(timelineItem);
+    });
+  });
+
   fetch('data/skills.json')
   .then(response => response.json())
   .then(data => {
