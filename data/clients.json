@@ -1,5 +1,10 @@
 {
      "clients": [
+      {
+        "href": "https://quakeslegacy.com",
+        "image": "./assets/images/clients/quakes-legacy.webp",
+        "alt": "quakes legacy client logo"
+      },
        {
          "href": "https://www.facebook.com/HAUCSCSOC",
          "image": "./assets/images/clients/soc-logo.webp",
