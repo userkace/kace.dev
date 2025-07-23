@@ -1,5 +1,12 @@
 {
      "projects": [
+      {
+        "title": "Legacy AI",
+        "description": "A react SaaS chatbot for TikTok Live creators.",
+        "image": "assets/images/portfolio/neurorite-app.webp",
+        "category": ["Web"],
+        "link": "https://legacy-ai-alpha.vercel.app"
+      },
        {
          "title": "Neurorite",
          "description": "A flutter made application for note-taking.",
