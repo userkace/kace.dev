@@ -2,17 +2,17 @@
      "tools": [{
                "name": "Github",
                "icon": "logo-github",
-               "value": 80
+               "value": 90
           },
           {
                "name": "Figma",
                "icon": "logo-figma",
-               "value": 70
+               "value": 90
           },
           {
                "name": "Stack Overflow",
                "icon": "logo-stackoverflow",
-               "value": 30
+               "value": 50
           }
      ],
 
