@@ -1,6 +1,11 @@
 {
      "clients": [
       {
+        "href": "https://dev.homesfarmsandland.com",
+        "image": "./assets/images/clients/homesfarmsandland.webp",
+        "alt": "homes farms and land client logo"
+      },
+      {
         "href": "https://quakeslegacy.com",
         "image": "./assets/images/clients/quakes-legacy.webp",
         "alt": "quakes legacy client logo"
