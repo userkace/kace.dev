@@ -15,13 +15,6 @@
          "link": "https://github.com/userkace/neurorite"
        },
        {
-         "title": "Profile",
-         "description": "A flutter made application showcasing my profile.",
-         "image": "assets/images/portfolio/film-website.webp",
-         "category": ["Android"],
-         "link": "https://github.com/userkace/profile"
-       },
-       {
          "title": "qr.kace.dev",
          "description": "Free online QR code maker.",
          "image": "assets/images/portfolio/qr-website.webp",
