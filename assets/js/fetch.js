@@ -47,7 +47,7 @@ fetch('data/experience.json')
   .then(data => {
     const experienceList = document.querySelector('#experience');
     const timelineSection = experienceList.closest('section.timeline');
-    
+
     // Create show more button container with background and border
     const showMoreWrapper = document.createElement('button');
     showMoreWrapper.style.background = '#282829';
@@ -64,7 +64,7 @@ fetch('data/experience.json')
     showMoreWrapper.style.fontWeight = '500';
     showMoreWrapper.style.gap = '8px';
     showMoreWrapper.style.transition = 'all 0.2s ease';
-    
+
     // Hover effect
     showMoreWrapper.onmouseenter = () => {
       document.body.style.cursor = 'url(../assets/css/link.png), pointer';
@@ -76,7 +76,7 @@ fetch('data/experience.json')
       showMoreWrapper.style.opacity = '1';
       showMoreWrapper.style.transform = 'translateY(0)';
     };
-    
+
     // Active/click effect
     showMoreWrapper.onmousedown = () => {
       showMoreWrapper.style.transform = 'translateY(1px)';
@@ -84,17 +84,17 @@ fetch('data/experience.json')
     showMoreWrapper.onmouseup = () => {
       showMoreWrapper.style.transform = 'translateY(-1px)';
     };
-    
+
     const showMoreContainer = document.createElement('div');
     showMoreContainer.style.textAlign = 'center';
     showMoreContainer.style.display = 'none';
-    
+
     // Create the show more content container
     const showMoreContent = document.createElement('div');
     showMoreContent.style.display = 'flex';
     showMoreContent.style.alignItems = 'center';
     showMoreContent.style.gap = '8px';
-    
+
     // Create the icon element
     const icon = document.createElement('div');
     icon.style.lineHeight = '0'; // Remove extra spacing around the icon
@@ -106,32 +106,32 @@ fetch('data/experience.json')
         style="width:20px;height:20px">
       </lord-icon>
     `;
-    
+
     // Create the text span
     const textSpan = document.createElement('span');
     textSpan.textContent = 'Show More';
-    
+
     // Assemble the button
     showMoreContent.appendChild(icon);
     showMoreContent.appendChild(textSpan);
     showMoreWrapper.appendChild(showMoreContent);
     showMoreContainer.appendChild(showMoreWrapper);
-    
+
     // Add button container to the DOM once, after the timeline list
     timelineSection.appendChild(showMoreContainer);
-    
+
     let showAll = false;
-    const itemsToShow = 4;
-    
+    const itemsToShow = 3;
+
     function renderExperienceItems() {
       // Clear existing items
       while (experienceList.firstChild) {
         experienceList.removeChild(experienceList.firstChild);
       }
-      
+
       // Determine which items to show
       const items = showAll ? data.timeline : data.timeline.slice(0, itemsToShow);
-      
+
       // Render the items
       items.forEach(item => {
         const timelineItem = document.createElement('li');
@@ -149,7 +149,7 @@ fetch('data/experience.json')
         timelineItem.appendChild(text);
         experienceList.appendChild(timelineItem);
       });
-      
+
       // Update button visibility and text
       if (data.timeline.length > itemsToShow) {
         showMoreContainer.style.display = 'block';
@@ -167,7 +167,7 @@ fetch('data/experience.json')
         showMoreContainer.style.display = 'none';
       }
     }
-    
+
     // Toggle show all/less
     showMoreWrapper.addEventListener('click', (e) => {
       e.preventDefault();
@@ -176,7 +176,7 @@ fetch('data/experience.json')
       // Scroll to the button to keep it in view
       showMoreWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
-    
+
     // Initial render
     renderExperienceItems();
   });
