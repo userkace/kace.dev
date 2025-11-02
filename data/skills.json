@@ -51,6 +51,11 @@
      ],
 
      "web_development": [{
+               "name": "React",
+               "src": "assets/images/ion/react.svg",
+               "value": 85
+          },
+          {
                "name": "HTML",
                "icon": "logo-html5",
                "value": 90
@@ -58,17 +63,17 @@
           {
                "name": "Tailwind",
                "src": "assets/images/ion/tailwind.svg",
-               "value": 85
+               "value": 90
           },
           {
                "name": "CSS",
                "icon": "logo-css3",
-               "value": 70
+               "value": 80
           },
           {
                "name": "JavaScript",
                "icon": "logo-javascript",
-               "value": 60
+               "value": 70
           }
      ]
 }
