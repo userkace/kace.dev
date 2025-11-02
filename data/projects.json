@@ -1,5 +1,12 @@
 {
-     "projects": [
+    "projects": [
+      {
+        "title": "HomesFarmsAndLand.com",
+        "description": "A real-estate website.",
+        "image": "assets/images/portfolio/homesfarmsandland.webp",
+        "category": ["Web"],
+        "link": "https://dev.homesfarmsandland.com"
+      },
       {
         "title": "Legacy AI",
         "description": "A react SaaS chatbot for TikTok Live creators.",
@@ -7,54 +14,54 @@
         "category": ["Web"],
         "link": "https://legacy-ai-alpha.vercel.app"
       },
-       {
-         "title": "Neurorite",
-         "description": "A flutter made application for note-taking.",
-         "image": "assets/images/portfolio/neurorite-app.webp",
-         "category": ["Android", "Web", "PWA"],
-         "link": "https://github.com/userkace/neurorite"
-       },
-       {
-         "title": "qr.kace.dev",
-         "description": "Free online QR code maker.",
-         "image": "assets/images/portfolio/qr-website.webp",
-         "category": ["Web","PWA"],
-         "link": "https://qr.kace.dev"
-       },
-       {
-         "title": "film.kace.dev",
-         "description": "Free online streaming website.",
-         "image": "assets/images/portfolio/film-website.webp",
-         "category": ["Web","PWA"],
-         "link": "https://github.com/userkace/film.kace.dev"
-       },
-       {
-         "title": "Packaged",
-         "description": "Android package name viewer.",
-         "image": "assets/images/portfolio/packaged-app.webp",
-         "category": ["Android"],
-         "link": "https://github.com/userkace/packaged"
-       },
-       {
-         "title": "m.me Link Maker",
-         "description": "A meta facebook messenger m.me link generator.",
-         "image": "assets/images/portfolio/mme-app.webp",
-         "category": ["PWA"],
-         "link": "https://github.com/userkace/m.me"
-       },
-       {
-         "title": "LOOP Website",
-         "description": "LOOP SOC HAU Website.",
-         "image": "assets/images/portfolio/loop-website.webp",
-         "category": ["Web"],
-         "link": "https://github.com/userkace/loop-hau"
-       },
-       {
-         "title": "GDSC Website",
-         "description": "GDSC-HAU Website.",
-         "image": "assets/images/portfolio/gdsc-website.webp",
-         "category": ["Web"],
-         "link": "https://github.com/userkace/gdsc-hau"
-       }
-     ]
-   }
+      {
+        "title": "Neurorite",
+        "description": "A flutter made application for note-taking.",
+        "image": "assets/images/portfolio/neurorite-app.webp",
+        "category": ["Android", "Web", "PWA"],
+        "link": "https://github.com/userkace/neurorite"
+      },
+      {
+        "title": "qr.kace.dev",
+        "description": "Free online QR code maker.",
+        "image": "assets/images/portfolio/qr-website.webp",
+        "category": ["Web","PWA"],
+        "link": "https://qr.kace.dev"
+      },
+      {
+        "title": "film.kace.dev",
+        "description": "Free online streaming website.",
+        "image": "assets/images/portfolio/film-website.webp",
+        "category": ["Web","PWA"],
+        "link": "https://github.com/userkace/film.kace.dev"
+      },
+      {
+        "title": "Packaged",
+        "description": "Android package name viewer.",
+        "image": "assets/images/portfolio/packaged-app.webp",
+        "category": ["Android"],
+        "link": "https://github.com/userkace/packaged"
+      },
+      {
+        "title": "m.me Link Maker",
+        "description": "A meta facebook messenger m.me link generator.",
+        "image": "assets/images/portfolio/mme-app.webp",
+        "category": ["PWA"],
+        "link": "https://github.com/userkace/m.me"
+      },
+      {
+        "title": "LOOP Website",
+        "description": "LOOP SOC HAU Website.",
+        "image": "assets/images/portfolio/loop-website.webp",
+        "category": ["Web"],
+        "link": "https://github.com/userkace/loop-hau"
+      },
+      {
+        "title": "GDSC Website",
+        "description": "GDSC-HAU Website.",
+        "image": "assets/images/portfolio/gdsc-website.webp",
+        "category": ["Web"],
+        "link": "https://github.com/userkace/gdsc-hau"
+      }
+    ]
+  }
