@@ -46,22 +46,139 @@ fetch('data/experience.json')
   .then(response => response.json())
   .then(data => {
     const experienceList = document.querySelector('#experience');
-    data.timeline.forEach(item => {
-      const timelineItem = document.createElement('li');
-      timelineItem.classList.add('timeline-item');
-      const title = document.createElement('h4');
-      title.classList.add('h4', 'timeline-item-title');
-      title.textContent = item.title;
-      const span = document.createElement('span');
-      span.textContent = item.date;
-      const text = document.createElement('p');
-      text.classList.add('timeline-text');
-      text.textContent = item.text;
-      timelineItem.appendChild(title);
-      timelineItem.appendChild(span);
-      timelineItem.appendChild(text);
-      experienceList.appendChild(timelineItem);
+    const timelineSection = experienceList.closest('section.timeline');
+    
+    // Create show more button container with background and border
+    const showMoreWrapper = document.createElement('button');
+    showMoreWrapper.style.background = '#282829';
+    showMoreWrapper.style.border = '1px solid #383838';
+    showMoreWrapper.style.borderRadius = '20px';
+    showMoreWrapper.style.padding = '15px 20px';
+    showMoreWrapper.style.display = 'inline-flex';
+    showMoreWrapper.style.alignItems = 'center';
+    showMoreWrapper.style.justifyContent = 'center';
+    showMoreWrapper.style.marginTop = '20px';
+    showMoreWrapper.style.cursor = 'url(../assets/css/link.png), pointer';
+    showMoreWrapper.style.color = '#fc955b';
+    showMoreWrapper.style.fontSize = '14px';
+    showMoreWrapper.style.fontWeight = '500';
+    showMoreWrapper.style.gap = '8px';
+    showMoreWrapper.style.transition = 'all 0.2s ease';
+    
+    // Hover effect
+    showMoreWrapper.onmouseenter = () => {
+      document.body.style.cursor = 'url(../assets/css/link.png), pointer';
+      showMoreWrapper.style.opacity = '0.9';
+      showMoreWrapper.style.transform = 'translateY(-1px)';
+    };
+    showMoreWrapper.onmouseleave = () => {
+      document.body.style.cursor = 'default';
+      showMoreWrapper.style.opacity = '1';
+      showMoreWrapper.style.transform = 'translateY(0)';
+    };
+    
+    // Active/click effect
+    showMoreWrapper.onmousedown = () => {
+      showMoreWrapper.style.transform = 'translateY(1px)';
+    };
+    showMoreWrapper.onmouseup = () => {
+      showMoreWrapper.style.transform = 'translateY(-1px)';
+    };
+    
+    const showMoreContainer = document.createElement('div');
+    showMoreContainer.style.textAlign = 'center';
+    showMoreContainer.style.display = 'none';
+    
+    // Create the show more content container
+    const showMoreContent = document.createElement('div');
+    showMoreContent.style.display = 'flex';
+    showMoreContent.style.alignItems = 'center';
+    showMoreContent.style.gap = '8px';
+    
+    // Create the icon element
+    const icon = document.createElement('div');
+    icon.style.lineHeight = '0'; // Remove extra spacing around the icon
+    icon.innerHTML = `
+      <lord-icon
+        src="https://cdn.lordicon.com/zmkotitn.json"
+        trigger="loop"
+        colors="primary:#fc955b"
+        style="width:20px;height:20px">
+      </lord-icon>
+    `;
+    
+    // Create the text span
+    const textSpan = document.createElement('span');
+    textSpan.textContent = 'Show More';
+    
+    // Assemble the button
+    showMoreContent.appendChild(icon);
+    showMoreContent.appendChild(textSpan);
+    showMoreWrapper.appendChild(showMoreContent);
+    showMoreContainer.appendChild(showMoreWrapper);
+    
+    // Add button container to the DOM once, after the timeline list
+    timelineSection.appendChild(showMoreContainer);
+    
+    let showAll = false;
+    const itemsToShow = 4;
+    
+    function renderExperienceItems() {
+      // Clear existing items
+      while (experienceList.firstChild) {
+        experienceList.removeChild(experienceList.firstChild);
+      }
+      
+      // Determine which items to show
+      const items = showAll ? data.timeline : data.timeline.slice(0, itemsToShow);
+      
+      // Render the items
+      items.forEach(item => {
+        const timelineItem = document.createElement('li');
+        timelineItem.classList.add('timeline-item');
+        const title = document.createElement('h4');
+        title.classList.add('h4', 'timeline-item-title');
+        title.textContent = item.title;
+        const span = document.createElement('span');
+        span.textContent = item.date;
+        const text = document.createElement('p');
+        text.classList.add('timeline-text');
+        text.textContent = item.text;
+        timelineItem.appendChild(title);
+        timelineItem.appendChild(span);
+        timelineItem.appendChild(text);
+        experienceList.appendChild(timelineItem);
+      });
+      
+      // Update button visibility and text
+      if (data.timeline.length > itemsToShow) {
+        showMoreContainer.style.display = 'block';
+        textSpan.textContent = showAll ? 'Show Less' : 'Show More';
+        // Change icon based on state
+        icon.innerHTML = `
+          <lord-icon
+            src="${showAll ? 'https://cdn.lordicon.com/ebyacdql.json' : 'https://cdn.lordicon.com/zmkotitn.json'}"
+            trigger="loop"
+            colors="primary:#fc955b"
+            style="width:20px;height:20px">
+          </lord-icon>
+        `;
+      } else {
+        showMoreContainer.style.display = 'none';
+      }
+    }
+    
+    // Toggle show all/less
+    showMoreWrapper.addEventListener('click', (e) => {
+      e.preventDefault();
+      showAll = !showAll;
+      renderExperienceItems();
+      // Scroll to the button to keep it in view
+      showMoreWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
+    
+    // Initial render
+    renderExperienceItems();
   });
 
 fetch('data/certification.json')
