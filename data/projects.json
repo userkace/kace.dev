@@ -53,7 +53,7 @@
         "title": "m.me Link Maker",
         "description": "A meta facebook messenger m.me link generator.",
         "image": "assets/images/portfolio/mme-app.webp",
-        "category": ["PWA"],
+        "category": ["Web","PWA"],
         "link": "https://github.com/userkace/m.me"
       },
       {
