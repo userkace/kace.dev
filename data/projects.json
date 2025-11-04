@@ -8,6 +8,13 @@
         "link": "https://dev.homesfarmsandland.com"
       },
       {
+        "title": "TrueVoice",
+        "description": "A browser extension that helps detect AI-generated voice recordings with machine learning.",
+        "image": "assets/images/portfolio/truevoice.gif",
+        "category": ["AI","Extension"],
+        "link": "https://github.com/userkace/true-voice"
+      },
+      {
         "title": "Legacy AI",
         "description": "A react SaaS chatbot for TikTok Live creators.",
         "image": "assets/images/portfolio/legacy-ai.webp",
