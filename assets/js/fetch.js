@@ -301,6 +301,7 @@ fetch('data/categories.json')
 
       const projectLink = document.createElement('a');
       projectLink.href = project.link;
+      projectLink.target = '_blank';
 
       const projectImg = document.createElement('figure');
       projectImg.classList.add('project-img');
