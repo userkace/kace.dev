@@ -1,5 +1,12 @@
 {
     "projects": [
+       {
+        "title": "Kronos",
+        "description": "A time-tracking application for employees.",
+        "image": "assets/images/portfolio/kronos.png",
+        "category": ["Web"],
+        "link": "https://kronos-eta.vercel.app"
+      },
       {
         "title": "homesfarmsandland.com",
         "description": "A real-estate website.",
